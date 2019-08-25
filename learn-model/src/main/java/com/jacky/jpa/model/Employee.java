@@ -18,6 +18,8 @@ public class Employee {
     @Column(name = "EMP_NAME")
     private String name;
 
+    private String empCode;
+
     @ManyToOne
     // 可以不用设置JoinColumn，如果不配置，默认的列名为dept_dept_id
     @JoinColumn(name = "DEPT_ID")
@@ -42,6 +44,14 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmpCode() {
+        return empCode;
+    }
+
+    public void setEmpCode(String empCode) {
+        this.empCode = empCode;
     }
 
     public Department getDept() {
